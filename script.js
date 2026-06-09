@@ -1,7 +1,7 @@
 /* JavaScript logic for Cinematic AI Portfolio - Pratyaksh Ranjan */
 
 document.addEventListener("DOMContentLoaded", () => {
-    
+
     // 1. Mouse Follower Orb Logic
     const cursorOrb = document.getElementById("cursorOrb");
     let targetX = 0;
@@ -19,10 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
         // Linear interpolation (lerp) for smooth motion
         currentX += (targetX - currentX) * speed;
         currentY += (targetY - currentY) * speed;
-        
+
         cursorOrb.style.left = `${currentX}px`;
         cursorOrb.style.top = `${currentY}px`;
-        
+
         requestAnimationFrame(animateOrb);
     }
     animateOrb();
@@ -43,24 +43,47 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    // 2. IntersectionObserver for Scroll-Reveal Animations
+    // 1. Initial Page Load Animation
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+    const loadTl = gsap.timeline();
+    loadTl.fromTo("header",
+        { y: -30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1.2, ease: "power4.out", force3D: true }
+    )
+        .fromTo(".hero-panel",
+            { y: 40, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1.4, ease: "power4.out", force3D: true },
+            "-=0.8"
+        )
+        .fromTo(".nav-dock",
+            { y: 40, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1.2, ease: "power4.out", force3D: true },
+            "-=1.0"
+        );
+
+    // 2. GSAP Scroll-Reveal Animations
+
     const revealElements = document.querySelectorAll(".reveal-up");
-    
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("active");
-                // Option: unobserve once revealed to keep performance high
-                // revealObserver.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px" // triggers slightly before entering
-    });
 
     revealElements.forEach(el => {
-        revealObserver.observe(el);
+        let delayVal = el.getAttribute("data-delay") || 0;
+        gsap.fromTo(el,
+            { y: 50, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 1.2,
+                delay: Number(delayVal),
+                ease: "power4.out",
+                force3D: true, // Forces hardware acceleration
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                }
+            }
+        );
     });
 
 
@@ -77,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const activeId = entry.target.getAttribute("id");
-                
+
                 // Update nav items
                 navItems.forEach(item => {
                     item.classList.remove("active");
@@ -95,19 +118,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    // 4. Smooth Scrolling for Nav Links (Optional fallback helper)
+    // 4. GSAP Smooth Scrolling for Nav Links
     navItems.forEach(item => {
         item.addEventListener("click", (e) => {
             e.preventDefault();
             const targetId = item.getAttribute("href");
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center"
-                });
-            }
+
+            gsap.to(window, {
+                duration: 1.2,
+                scrollTo: { y: targetId, offsetY: 0 },
+                ease: "power4.inOut"
+            });
         });
     });
 
@@ -118,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const triggerCVDownload = (e) => {
         e.preventDefault();
-        
+
         const cvMarkdown = `# PRATYAKSH RANJAN — AI/ML Engineer
 Email: contact@pratyaksh.ai | LinkedIn: linkedin.com/in/pratyaksh | GitHub: github.com/pratyaksh
 

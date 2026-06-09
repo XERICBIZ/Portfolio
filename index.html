@@ -27,9 +27,9 @@
     <!-- Top Navigation Header -->
     <header>
         <div class="container header-container">
-            <div class="logo">
-                <div class="logo-dot"></div>
-                PRATYAKSH RANJAN
+            <div class="logo" style="gap: 0.25rem; align-items: baseline;">
+                <div class="logo-dot" style="width: 10px; height: 10px; margin-bottom: 0.2rem;"></div>
+                <span class="text-gradient-amber" style="font-size: 1.8rem; font-weight: 800; letter-spacing: -0.02em; font-family: 'Inter', sans-serif;">Pr.</span>
             </div>
             <a class="btn-primary" href="#contact" id="downloadCVHeader">
                 <span class="material-symbols-outlined">download</span>
@@ -43,7 +43,7 @@
 
         <!-- 1. Home / Hero Section -->
         <section id="home">
-            <div class="glass-panel inner-glow-border hero-panel reveal-up active">
+            <div class="glass-panel inner-glow-border hero-panel">
                 <!-- Left Side Content -->
                 <div style="flex: 1.2; display: flex; flex-direction: column; gap: 2rem; z-index: 10;">
                     <div class="badge">
@@ -296,7 +296,7 @@
                 </div>
 
                 <!-- Education Timeline (Right Column) -->
-                <div class="reveal-up" style="transition-delay: 0.15s;">
+                <div class="reveal-up" data-delay="0.3">
                     <div class="milestones-title-block">
                         <h2 style="color: var(--on-surface);">Education</h2>
                     </div>
@@ -428,6 +428,10 @@
         </div>
     </footer>
 
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
     <!-- Local Logic Script -->
     <script src="script.js"></script>
 </body>
