@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratyaksh Ranjan - AI/ML Engineer Portfolio</title>
+    <!-- Google Fonts & Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Particles Background -->
+    <div class="particles-bg"></div>
+
+    <!-- Ambient Neural Glow Orbs -->
+    <div class="neural-glow-container">
+        <div class="neural-glow neural-glow-1"></div>
+        <div class="neural-glow neural-glow-2"></div>
+    </div>
+
+    <!-- Mouse Trail Glow Orb -->
+    <div class="cursor-orb" id="cursorOrb"></div>
+
+    <!-- Top Navigation Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-dot"></div>
+                PRATYAKSH RANJAN
+            </div>
+            <a class="btn-primary" href="#contact" id="downloadCVHeader">
+                <span class="material-symbols-outlined">download</span>
+                Download CV
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content wrapper -->
+    <main class="container">
+
+        <!-- 1. Home / Hero Section -->
+        <section id="home">
+            <div class="glass-panel inner-glow-border hero-panel reveal-up active">
+                <!-- Left Side Content -->
+                <div style="flex: 1.2; display: flex; flex-direction: column; gap: 2rem; z-index: 10;">
+                    <div class="badge">
+                        <span class="badge-dot"></span>
+                        Open to Research Opportunities
+                    </div>
+                    <div class="hero-title-container">
+                        <span class="hero-subtitle">AI/ML Engineer</span>
+                        <h1 class="hero-title text-gradient">Pratyaksh<br>Ranjan</h1>
+                    </div>
+                    
+                    <div class="hero-links">
+                        <a href="mailto:ranjanpratyaksh121@gmail.com" class="hero-link-item">
+                            <span class="material-symbols-outlined">mail</span>
+                            <span>ranjanpratyaksh121@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/pratyaksh-ranjan-61794b383/" target="_blank" class="hero-link-item">
+                            <span class="material-symbols-outlined">link</span>
+                            <span>linkedin.com/in/pratyaksh-ranjan</span>
+                        </a>
+                        <a href="https://github.com/XERICBIZ" target="_blank" class="hero-link-item">
+                            <span class="material-symbols-outlined">code</span>
+                            <span>github.com/XERICBIZ</span>
+                        </a>
+                        <a href="https://www.instagram.com/stoic_xeric/" target="_blank" class="hero-link-item">
+                            <span class="material-symbols-outlined">location_on</span>
+                            <span>Global</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side Image - Real Photo of Pratyaksh -->
+                <div class="hero-img-container floating-elem">
+                    <img 
+                        src="pratyaksh.jpg" 
+                        alt="Pratyaksh Ranjan - AI/ML Engineer"
+                        style="
+                            position: absolute;
+                            inset: 0;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center top;
+                            border-radius: 1rem;
+                            z-index: 10;
+                            mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+                            -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+                            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+                        "
+                        onmouseover="this.style.transform='scale(1.03)'"
+                        onmouseout="this.style.transform='scale(1)'"
+                    />
+                    <div class="hero-img-glow"></div>
+                    <!-- Amber glowing circle behind the photo -->
+                    <div style="position: absolute; width: 110%; height: 110%; background: radial-gradient(circle at 50% 60%, rgba(255,180,0,0.22) 0%, transparent 65%); filter: blur(50px); z-index: 1; border-radius: 50%;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. About Section -->
+        <section id="about">
+            <h2 class="text-gradient-amber" style="font-size: 2.25rem; font-weight: 700; margin-bottom: 2.5rem; letter-spacing: -0.02em;">About</h2>
+            <div class="grid-2 reveal-up">
+                <!-- Journey Text Card -->
+                <div class="glass-panel glass-panel-hover inner-glow-border" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; gap: 1.5rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem;">
+                        <span class="material-symbols-outlined text-gradient-amber" style="font-size: 2rem; font-variation-settings: 'FILL' 1;">swap_horiz</span>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--on-surface);">The Transition</h3>
+                    </div>
+                    <p class="about-p">
+                        My journey began in the structured world of web development, building scalable architectures and intuitive interfaces. However, the potential of artificial intelligence to solve complex, unstructured problems drew me towards research.
+                    </p>
+                    <p class="about-p">
+                        Today, I bridge the gap between elegant engineering and cutting-edge ML models, focusing on developing intelligent systems that are not only powerful but accessible and seamlessly integrated into human workflows.
+                    </p>
+                    <div class="about-chips">
+                        <span class="chip">Web Dev</span>
+                        <span class="material-symbols-outlined" style="color: var(--on-surface-variant); font-size: 1rem;">arrow_forward</span>
+                        <span class="chip">AI/ML Research</span>
+                    </div>
+                </div>
+
+                <!-- Abstract Neural Image panel -->
+                <div class="glass-panel inner-glow-border about-img-panel">
+                    <img class="about-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHrYBOQMdOvJ6HmH58U7bFSSf_HF5zcEtOs_8R8HbI5JEirJhfceGQmCggpRWExE8CHjfKLKFS8dyF2tyjFxVup4v0uAI40RU3RalW6gTZsbeBX66_DuYoS4BWzWcck5qZxm2X6T5mT0FHHPhCPzJYS9BiukXV0lUoxXqgbJcBsgBPkXYd3XgEjyOFriWQXwT3wOQ-ZlPPpSP-IQ5bqoiuIufqHI_9jXdRY92t1Wb-AiYlwZKyR8PWVwREmduvuy3fFIESHWPeTHkp" alt="Abstract Representation of Neural Networks">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(to top, var(--background), transparent); z-index: 5;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Research Section -->
+        <section id="research">
+            <h2 class="text-gradient-amber" style="font-size: 2.25rem; font-weight: 700; margin-bottom: 2.5rem; letter-spacing: -0.02em;">Research</h2>
+            <div class="glass-panel glass-panel-hover inner-glow-border reveal-up" style="padding: 2.5rem;">
+                <div class="grid-2 research-grid" style="gap: 3rem; align-items: center;">
+                    <!-- Research Image Card -->
+                    <div class="research-img-container">
+                        <img class="research-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNylfQi3Gldifzil8D8lyicSjn9yfJs8J2dpsnxziFyjg9vrmzhDyamFbM5-QkrhHaqV17m8tQADQGj7bV8KF4zdPiQNqsxZRgAROIOeG5lEhyCkpi6j8Y2gTeja2_mkFVz_MDstb6rsjz2weo8sFPPGGtnrOkiJajKLJQScXJiYQUxf5Jjh54E3QcxfhICd3KBWVgfF_o_IWdz-zMZ2YJG6lYKLfFloJwaD6NYaOdIdteI9mMn8hYOwYiLCZckwB1dw4ina9hL9MR" alt="Quantum Computing Environment">
+                        <div class="research-img-mask"></div>
+                        <div class="research-tags">
+                            <span class="tag-blur">AI/ML</span>
+                            <span class="tag-blur">Quantum</span>
+                        </div>
+                    </div>
+
+                    <!-- Research Description & Objectives -->
+                    <div class="research-content">
+                        <div class="research-header">
+                            <h1>Quantum AI for Seismic Wave Analysis</h1>
+                            <p>Early Earthquake Prediction Modeling</p>
+                        </div>
+                        
+                        <div>
+                            <div class="research-section-title">About The Research</div>
+                            <p style="font-size: 1rem; color: var(--on-surface-variant); line-height: 1.6;">
+                                Pioneering the application of quantum neural networks to analyze complex seismic wave data. This research aims to significantly reduce the latency in early earthquake warning systems by leveraging quantum superposition for multi-variable pattern recognition in real-time geological data streams.
+                            </p>
+                        </div>
+
+                        <div>
+                            <div class="research-section-title">Core Objectives</div>
+                            <ul class="objectives-list">
+                                <li class="objective-item">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                    <p>Develop hybrid quantum-classical algorithms for noise reduction in seismic signals.</p>
+                                </li>
+                                <li class="objective-item">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                    <p>Achieve a 40% improvement in prediction accuracy over standard CNN models.</p>
+                                </li>
+                                <li class="objective-item">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                    <p>Publish findings in top-tier seismology and computational physics journals.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a href="#" class="btn-secondary" style="width: fit-content;">
+                            <span>View Whitepaper</span>
+                            <span class="material-symbols-outlined" style="font-size: 1.125rem;">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Technical Arsenal (Skills) Section -->
+        <section id="skills">
+            <h2 class="text-gradient-amber" style="font-size: 2.25rem; font-weight: 700; margin-bottom: 2.5rem; letter-spacing: -0.02em;">Technical Arsenal</h2>
+            <div class="skills-grid reveal-up">
+                <!-- Card 1: Machine Learning & AI -->
+                <div class="glass-panel glass-panel-hover inner-glow-border skill-category-card">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrap">
+                            <span class="material-symbols-outlined">psychology</span>
+                        </div>
+                        <h3 class="skill-category-title">ML & Deep Learning</h3>
+                    </div>
+                    <div class="skills-chips-wrapper">
+                        <span class="skill-chip">PyTorch</span>
+                        <span class="skill-chip">TensorFlow</span>
+                        <span class="skill-chip">Computer Vision</span>
+                        <span class="skill-chip">Hugging Face</span>
+                        <span class="skill-chip">CNN / Transformers</span>
+                        <span class="skill-chip">NLP</span>
+                        <span class="skill-chip">Anomaly Detection</span>
+                        <span class="skill-chip">Scikit-Learn</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: Programming Languages -->
+                <div class="glass-panel glass-panel-hover inner-glow-border skill-category-card">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrap">
+                            <span class="material-symbols-outlined">code</span>
+                        </div>
+                        <h3 class="skill-category-title">Languages</h3>
+                    </div>
+                    <div class="skills-chips-wrapper">
+                        <span class="skill-chip">Python</span>
+                        <span class="skill-chip">JavaScript (ES6+)</span>
+                        <span class="skill-chip">C++</span>
+                        <span class="skill-chip">SQL</span>
+                        <span class="skill-chip">HTML5 / CSS3</span>
+                        <span class="skill-chip">Bash</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Infrastructure & Tools -->
+                <div class="glass-panel glass-panel-hover inner-glow-border skill-category-card">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrap">
+                            <span class="material-symbols-outlined">build</span>
+                        </div>
+                        <h3 class="skill-category-title">DevOps & Tools</h3>
+                    </div>
+                    <div class="skills-chips-wrapper">
+                        <span class="skill-chip">Docker</span>
+                        <span class="skill-chip">Git & GitHub</span>
+                        <span class="skill-chip">CUDA</span>
+                        <span class="skill-chip">Linux Systems</span>
+                        <span class="skill-chip">AWS Cloud</span>
+                        <span class="skill-chip">Git Actions (CI/CD)</span>
+                        <span class="skill-chip">Weights & Biases</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Milestones (Achievements & Education) Section -->
+        <section id="milestones">
+            <h2 class="text-gradient-amber" style="font-size: 2.25rem; font-weight: 700; margin-bottom: 2.5rem; letter-spacing: -0.02em;">Milestones</h2>
+            <div class="milestones-layout">
+                <!-- Achievements (Left Column) -->
+                <div class="reveal-up">
+                    <div class="milestones-title-block">
+                        <h2>Achievements</h2>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <!-- Highlighted Breakthrough Achievement -->
+                        <div class="glass-panel inner-glow-border achievement-hero-card">
+                            <div class="achievement-card-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuARFp40XBaVpZCX8D9U_5Iy1zJOQjw5rkWmYyQWsUdEseo1QI5KBHpQ9XfFr779mW6i69Tp2SFzqjWAN8_I4Sz96U0b7ASFxtG14PNOJZYIPq15nwV2QCZLlSHQ5AY9LtCxm-DhF2nx6dhZ5Mi5XhOR6kwCYpeRF-HgMWRoXC9-37uVLTl9k0xBHKTg7GFzfDHbSKQ-IFxLwod0pqu4az6z6rJ_WegAOABAveOJjZWs2EjLrwiyCeGqk6EOeHSy9FjL1ukwLN5ABv6d');"></div>
+                            <div class="achievement-card-overlay"></div>
+                            
+                            <div class="achievement-card-content">
+                                <div class="achievement-badge">
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span>Breakthrough</span>
+                                </div>
+                                <h3 class="achievement-card-title">Discovered a Moving Celestial Object</h3>
+                                <p class="achievement-card-p">Identified a previously uncatalogued moving object in deep space image datasets using custom machine learning algorithms for anomaly detection.</p>
+                                <div class="achievement-card-tags">
+                                    <span class="achievement-card-tag">Computer Vision</span>
+                                    <span class="achievement-card-tag">Data Analysis</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Secondary Achievement -->
+                        <div class="glass-panel glass-panel-hover inner-glow-border achievement-subcard">
+                            <div class="achievement-subcard-icon">
+                                <span class="material-symbols-outlined">emoji_events</span>
+                            </div>
+                            <div class="achievement-subcard-text">
+                                <h4>Aspiring Kaggle Competitor</h4>
+                                <p>Consistently ranked in the top percentile in global machine learning competitions focused on predictive modeling.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Timeline (Right Column) -->
+                <div class="reveal-up" style="transition-delay: 0.15s;">
+                    <div class="milestones-title-block">
+                        <h2 style="color: var(--on-surface);">Education</h2>
+                    </div>
+                    <div class="glass-panel inner-glow-border timeline-card">
+                        <div class="timeline-line"></div>
+                        <div class="timeline-items">
+                            <!-- Timeline Item 1 -->
+                            <div class="timeline-item">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-date">2025 — 2029</div>
+                                <h3 class="timeline-title">Indian Institute of Information Technology (IIIT) Manipur</h3>
+                                <p class="timeline-desc">Bachelor of Technology in Computer Science</p>
+                                <div class="timeline-tags">
+                                    <span class="timeline-tag">Machine Learning</span>
+                                    <span class="timeline-tag">Algorithms</span>
+                                    <span class="timeline-tag">Data Structures</span>
+                                </div>
+                            </div>
+                            <!-- Timeline Item 2 -->
+                            <div class="timeline-item inactive">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-date">2021 — 2023</div>
+                                <h3 class="timeline-title">Patna Central School</h3>
+                                <p class="timeline-desc">Higher Secondary Education</p>
+                            </div>
+                            <!-- Timeline Item 3 -->
+                            <div class="timeline-item inactive">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-date">2014 — 2021</div>
+                                <h3 class="timeline-title">Vidya Vihar Residential School</h3>
+                                <p class="timeline-desc">Secondary Education</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Contact Section -->
+        <section id="contact">
+            <div class="contact-intro-block reveal-up">
+                <h1 class="text-gradient">Let's build the future</h1>
+                <p>Open to visionary collaborations, AI/ML research opportunities, and conversations that push boundaries.</p>
+            </div>
+            
+            <div class="contact-card-wrap reveal-up">
+                <!-- Info details card -->
+                <div class="glass-panel glass-panel-hover inner-glow-border contact-card-info">
+                    <h2>Get in Touch</h2>
+                    
+                    <a href="mailto:ranjanpratyaksh121@gmail.com" class="contact-link-row">
+                        <div class="contact-icon-box">
+                            <span class="material-symbols-outlined">mail</span>
+                        </div>
+                        <div class="contact-text-box">
+                            <p>Email</p>
+                            <p>ranjanpratyaksh121@gmail.com</p>
+                        </div>
+                    </a>
+
+                    <div class="contact-social-cluster">
+                        <a href="https://www.linkedin.com/in/pratyaksh-ranjan-61794b383/" target="_blank" class="contact-social-btn" aria-label="LinkedIn">
+                            <span class="material-symbols-outlined">public</span>
+                        </a>
+                        <a href="https://github.com/XERICBIZ" target="_blank" class="contact-social-btn" aria-label="GitHub">
+                            <span class="material-symbols-outlined">code</span>
+                        </a>
+                        <a href="https://x.com/BizXeric2416" target="_blank" class="contact-social-btn" aria-label="X / Twitter">
+                            <span class="material-symbols-outlined">alternate_email</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CV Card -->
+                <div class="glass-panel glass-panel-hover inner-glow-border contact-resume-card">
+                    <div class="contact-resume-icon">
+                        <span class="material-symbols-outlined">description</span>
+                    </div>
+                    <h3>Curriculum Vitae</h3>
+                    <p>Detailed overview of research, publications, and technical expertise.</p>
+                    <button class="btn-primary" id="downloadCVBtn">
+                        <span class="material-symbols-outlined">download</span>
+                        Download Resume
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Floating Bottom Navigation Dock -->
+    <nav class="nav-dock">
+        <a href="#home" class="nav-item active">
+            <span class="material-symbols-outlined">home</span>
+            <span class="nav-text">Home</span>
+        </a>
+        <a href="#about" class="nav-item">
+            <span class="material-symbols-outlined">person</span>
+            <span class="nav-text">About</span>
+        </a>
+        <a href="#research" class="nav-item">
+            <span class="material-symbols-outlined">science</span>
+            <span class="nav-text">Research</span>
+        </a>
+        <a href="#skills" class="nav-item">
+            <span class="material-symbols-outlined">psychology</span>
+            <span class="nav-text">Skills</span>
+        </a>
+        <a href="#milestones" class="nav-item">
+            <span class="material-symbols-outlined">military_tech</span>
+            <span class="nav-text">Milestones</span>
+        </a>
+        <a href="#contact" class="nav-item">
+            <span class="material-symbols-outlined">mail</span>
+            <span class="nav-text">Contact</span>
+        </a>
+    </nav>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <p class="footer-copyright">© 2026 Pratyaksh Ranjan. Built for the future of AI.</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+                <a href="https://github.com/XERICBIZ" class="footer-link" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/pratyaksh-ranjan-61794b383/" class="footer-link" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Local Logic Script -->
+    <script src="script.js"></script>
+</body>
+</html>
